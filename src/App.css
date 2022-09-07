@@ -4,6 +4,7 @@ body {
   height: 100%;
   width: 100%;
   background: linear-gradient(90deg, #00817f 0%, #170055 99.84%);
+  overflow-x:hidden;
 }
 main{
     height: 100%;
@@ -16,8 +17,9 @@ h1{
   color: #99E4BB;
 }
 input {
-  height: 35px;
+  height: 25px;
   width : 250px;
+  padding:5px;
 }
 .basic-grid{
   display:flex;

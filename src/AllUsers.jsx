@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import Research from "./Research"
+
 const AllUsers = () => {
  const [users, setUsers] = useState([]);
   const [searchUsers, setSearchUsers] = useState("")
-
 
   const fetchData = () => {
 
@@ -17,34 +18,21 @@ const AllUsers = () => {
   useEffect(() => {
     fetchData()
   }, []);
-  const handleSearchUser = (e) => {
-    let value=e.target.value;
-    setSearchUsers(value); 
-  };
-  console.log(searchUsers);
+  
   return (
-    <>
-       <input
-        type="text"
-        name="search"
-        placeholder="Rechercher par nom"
-         onChange={handleSearchUser}
-      />
-    <div className="basic-grid">
-           {users && users.filter((value)=>{
-          return value.name.toLowerCase().includes(searchUsers.toLowerCase());
-           }).map((value) => (
-            <div className="card" key={value.id}>
-              <div className="card-header">
-                <img
-                  src={`https://robohash.org/${value.id}`}
-                />
-              </div>
-              <div className="card-body">
+   <>
+       <Research value={searchUsers} onChange={setSearchUsers}/>
+       <div className="basic-grid">
+        {users && users.filter(value=>searchUsers.length>2?value.name.toLowerCase().includes(searchUsers.toLowerCase()):true).map((value) => (
+         <div className="card" key={value.id}>
+            <div className="card-header">
+              <img src={`https://robohash.org/${value.id}`}/>
+            </div>
+            <div className="card-body">
                 <div className="name">{value.name}</div>
                 <div className="email">{value.email}</div>
-              </div>
             </div>
+          </div>
           ))}
       </div>
     </>

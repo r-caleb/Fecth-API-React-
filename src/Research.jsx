@@ -1,12 +1,12 @@
 import './App.css'
 
-export default function Research({handleSearchUser}) {
+export default function Research({value, onChange}) {
   return (
-   <input
-        type="text"
+   <input type="text"
         name="search"
         placeholder="Rechercher par nom"
-         onChange={handleSearchUser}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
       />
   )
 }
