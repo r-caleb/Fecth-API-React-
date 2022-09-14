@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'SEGA LOGO FONT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SEGA LOGO FONT'), url('./SEGA.woff') format('woff');
+    }
 body {
   text-align: center;
   vertical-align: center;
@@ -15,6 +21,8 @@ img {
 }
 h1{
   color: #99E4BB;
+  font-family: 'SEGA LOGO FONT';
+  font-weight: 550;
 }
 input {
   height: 25px;
@@ -41,4 +49,77 @@ input {
   background-color:#ffa300;
   box-shadow: 0px 0px 1px 15px #ffa300;
 }
+.single-robot{
+  display:flex;
+  flex-direction: column;
+  gap:5rem;
+  justify-content: center;
+  align-items:center;
+}
+table{
+  background-color:#99E4BB;
+  font-size:16px;
+}
+tr:hover {background-color: #ddd;}
+.back{
+  color:#f5f4f4;
+  margin-top:15px;
+  font-size: 22px;
+}
+.link{
+  color: black;
+  text-decoration: none;
+}
+.name{
+  font-weight:600;
+  font-size: 20px;
+}
 
+@media screen and (min-width: 600px) and (max-width: 1200px){
+.basic-grid{
+  display:flex;
+  gap: 5rem;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items:center;
+  margin-top:30px;
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+}
+.card{
+  background-color:#99E4BB;
+  width: 40%;
+  padding : 10px;
+}
+.card:hover{
+  background-color:#ffa300;
+  box-shadow: 0px 0px 1px 15px #ffa300;
+}
+
+  
+}
+@media screen and (max-width: 599px) {
+.basic-grid{
+  display:flex;
+  gap: 5rem;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items:center;
+  margin-top:30px;
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+}
+.card{
+  background-color:#99E4BB;
+  width: 100%;
+  padding : 10px;
+}
+.card:hover{
+  background-color:#ffa300;
+  box-shadow: 0px 0px 1px 15px #ffa300;
+}
+
+  
+}
