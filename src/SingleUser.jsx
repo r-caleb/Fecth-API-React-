@@ -22,7 +22,7 @@ const {id} = useParams();
   }, []);
   return (
    <div className="single-robot">
-      <Link to="/" className="back"> {`< Back To Users`}</Link>
+      <Link to="/" className="back"> {`< Retour  `}</Link>
       <table border={1}>
         <tr>
           <td colSpan={2}>
@@ -36,11 +36,11 @@ const {id} = useParams();
           <td>{user.name}</td>
         </tr>
         <tr>
-          <td>Website</td>
+          <td>Site Web</td>
           <td>{user.website}</td>
         </tr>
         <tr>
-          <td>Phone</td>
+          <td>Téléphone</td>
           <td>{user.phone}</td>
         </tr>
         <tr>
@@ -48,14 +48,14 @@ const {id} = useParams();
           <td>{user.email}</td>
         </tr>
         <tr>
-          <td>Company</td>
+          <td>Companie</td>
           <td>
             {user?.company?.name},{user?.company?.catchPhrase},
             {user?.company?.bs}
           </td>
         </tr>
         <tr>
-          <td>Address</td>
+          <td>Adresse</td>
           <td>
             {user?.address?.street},{user?.address?.city},{' '}
             {user?.address?.suite}, {user?.address?.zipcode}
